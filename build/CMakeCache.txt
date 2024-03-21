@@ -331,13 +331,13 @@ PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3
 PYTHON_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpython3.11.so
 
 //Value Computed by CMake
-pybind11_BINARY_DIR:STATIC=/home/radek/repos/sentiment_analysis/build/_deps/pybind11-build
+pybind11_BINARY_DIR:STATIC=/home/radek/repos/sentiment_analysis/build/pybind11-2.11.1
 
 //Value Computed by CMake
 pybind11_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-pybind11_SOURCE_DIR:STATIC=/home/radek/repos/sentiment_analysis/build/_deps/pybind11-src
+pybind11_SOURCE_DIR:STATIC=/home/radek/repos/sentiment_analysis/pybind11-2.11.1
 
 //Value Computed by CMake
 sentiment_BINARY_DIR:STATIC=/home/radek/repos/sentiment_analysis/build
@@ -536,7 +536,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3][v3.11.2(3.
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //Test HAS_FLTO
 HAS_FLTO:INTERNAL=1
-PYBIND11_INCLUDE_DIR:INTERNAL=/home/radek/repos/sentiment_analysis/build/_deps/pybind11-src/include
+PYBIND11_INCLUDE_DIR:INTERNAL=/home/radek/repos/sentiment_analysis/pybind11-2.11.1/include
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 PYTHON_INCLUDE_DIRS:INTERNAL=/usr/include/python3.11
@@ -558,7 +558,7 @@ _Python:INTERNAL=PYTHON
 //True if pybind11 and all required components found on the system
 pybind11_FOUND:INTERNAL=TRUE
 //Directory where pybind11 headers are located
-pybind11_INCLUDE_DIR:INTERNAL=/home/radek/repos/sentiment_analysis/build/_deps/pybind11-src/include
+pybind11_INCLUDE_DIR:INTERNAL=/home/radek/repos/sentiment_analysis/pybind11-2.11.1/include
 //Directories where pybind11 and possibly Python headers are located
-pybind11_INCLUDE_DIRS:INTERNAL=/home/radek/repos/sentiment_analysis/build/_deps/pybind11-src/include;/usr/include/python3.11
+pybind11_INCLUDE_DIRS:INTERNAL=/home/radek/repos/sentiment_analysis/pybind11-2.11.1/include;/usr/include/python3.11
 

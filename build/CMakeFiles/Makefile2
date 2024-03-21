@@ -63,87 +63,59 @@ CMAKE_BINARY_DIR = /home/radek/repos/sentiment_analysis/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/SModule.dir/all
-all: CMakeFiles/SExecutable.dir/all
-all: _deps/pybind11-build/all
+all: CMakeFiles/sentiment.dir/all
+all: pybind11-2.11.1/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: _deps/pybind11-build/preinstall
+preinstall: pybind11-2.11.1/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/SModule.dir/clean
-clean: CMakeFiles/SExecutable.dir/clean
-clean: _deps/pybind11-build/clean
+clean: CMakeFiles/sentiment.dir/clean
+clean: pybind11-2.11.1/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory _deps/pybind11-build
+# Directory level rules for directory pybind11-2.11.1
 
 # Recursive "all" directory target.
-_deps/pybind11-build/all:
-.PHONY : _deps/pybind11-build/all
+pybind11-2.11.1/all:
+.PHONY : pybind11-2.11.1/all
 
 # Recursive "preinstall" directory target.
-_deps/pybind11-build/preinstall:
-.PHONY : _deps/pybind11-build/preinstall
+pybind11-2.11.1/preinstall:
+.PHONY : pybind11-2.11.1/preinstall
 
 # Recursive "clean" directory target.
-_deps/pybind11-build/clean:
-.PHONY : _deps/pybind11-build/clean
+pybind11-2.11.1/clean:
+.PHONY : pybind11-2.11.1/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/SModule.dir
+# Target rules for target CMakeFiles/sentiment.dir
 
 # All Build rule for target.
-CMakeFiles/SModule.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SModule.dir/build.make CMakeFiles/SModule.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SModule.dir/build.make CMakeFiles/SModule.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/radek/repos/sentiment_analysis/build/CMakeFiles --progress-num=3,4 "Built target SModule"
-.PHONY : CMakeFiles/SModule.dir/all
+CMakeFiles/sentiment.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentiment.dir/build.make CMakeFiles/sentiment.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentiment.dir/build.make CMakeFiles/sentiment.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/radek/repos/sentiment_analysis/build/CMakeFiles --progress-num=1,2 "Built target sentiment"
+.PHONY : CMakeFiles/sentiment.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/SModule.dir/rule: cmake_check_build_system
+CMakeFiles/sentiment.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/radek/repos/sentiment_analysis/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SModule.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sentiment.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/radek/repos/sentiment_analysis/build/CMakeFiles 0
-.PHONY : CMakeFiles/SModule.dir/rule
+.PHONY : CMakeFiles/sentiment.dir/rule
 
 # Convenience name for target.
-SModule: CMakeFiles/SModule.dir/rule
-.PHONY : SModule
+sentiment: CMakeFiles/sentiment.dir/rule
+.PHONY : sentiment
 
 # clean rule for target.
-CMakeFiles/SModule.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SModule.dir/build.make CMakeFiles/SModule.dir/clean
-.PHONY : CMakeFiles/SModule.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/SExecutable.dir
-
-# All Build rule for target.
-CMakeFiles/SExecutable.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SExecutable.dir/build.make CMakeFiles/SExecutable.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SExecutable.dir/build.make CMakeFiles/SExecutable.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/radek/repos/sentiment_analysis/build/CMakeFiles --progress-num=1,2 "Built target SExecutable"
-.PHONY : CMakeFiles/SExecutable.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/SExecutable.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/radek/repos/sentiment_analysis/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SExecutable.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/radek/repos/sentiment_analysis/build/CMakeFiles 0
-.PHONY : CMakeFiles/SExecutable.dir/rule
-
-# Convenience name for target.
-SExecutable: CMakeFiles/SExecutable.dir/rule
-.PHONY : SExecutable
-
-# clean rule for target.
-CMakeFiles/SExecutable.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SExecutable.dir/build.make CMakeFiles/SExecutable.dir/clean
-.PHONY : CMakeFiles/SExecutable.dir/clean
+CMakeFiles/sentiment.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentiment.dir/build.make CMakeFiles/sentiment.dir/clean
+.PHONY : CMakeFiles/sentiment.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

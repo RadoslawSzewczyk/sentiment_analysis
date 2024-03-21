@@ -117,38 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SModule
+# Target rules for targets named sentiment
 
 # Build rule for target.
-SModule: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SModule
-.PHONY : SModule
+sentiment: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentiment
+.PHONY : sentiment
 
 # fast build rule for target.
-SModule/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SModule.dir/build.make CMakeFiles/SModule.dir/build
-.PHONY : SModule/fast
-
-#=============================================================================
-# Target rules for targets named SExecutable
-
-# Build rule for target.
-SExecutable: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SExecutable
-.PHONY : SExecutable
-
-# fast build rule for target.
-SExecutable/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SExecutable.dir/build.make CMakeFiles/SExecutable.dir/build
-.PHONY : SExecutable/fast
+sentiment/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentiment.dir/build.make CMakeFiles/sentiment.dir/build
+.PHONY : sentiment/fast
 
 t.o: t.cpp.o
 .PHONY : t.o
 
 # target to build an object file
 t.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SModule.dir/build.make CMakeFiles/SModule.dir/t.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SExecutable.dir/build.make CMakeFiles/SExecutable.dir/t.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentiment.dir/build.make CMakeFiles/sentiment.dir/t.cpp.o
 .PHONY : t.cpp.o
 
 t.i: t.cpp.i
@@ -156,8 +142,7 @@ t.i: t.cpp.i
 
 # target to preprocess a source file
 t.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SModule.dir/build.make CMakeFiles/SModule.dir/t.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SExecutable.dir/build.make CMakeFiles/SExecutable.dir/t.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentiment.dir/build.make CMakeFiles/sentiment.dir/t.cpp.i
 .PHONY : t.cpp.i
 
 t.s: t.cpp.s
@@ -165,8 +150,7 @@ t.s: t.cpp.s
 
 # target to generate assembly for a file
 t.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SModule.dir/build.make CMakeFiles/SModule.dir/t.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SExecutable.dir/build.make CMakeFiles/SExecutable.dir/t.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentiment.dir/build.make CMakeFiles/sentiment.dir/t.cpp.s
 .PHONY : t.cpp.s
 
 # Help Target
@@ -177,8 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... SExecutable"
-	@echo "... SModule"
+	@echo "... sentiment"
 	@echo "... t.o"
 	@echo "... t.i"
 	@echo "... t.s"

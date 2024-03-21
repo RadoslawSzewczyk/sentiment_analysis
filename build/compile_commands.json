@@ -1,12 +1,7 @@
 [
 {
   "directory": "/home/radek/repos/sentiment_analysis/build",
-  "command": "/usr/bin/c++ -DSModule_EXPORTS -isystem /home/radek/repos/sentiment_analysis/build/_deps/pybind11-src/include -isystem /usr/include/python3.11 -fPIC -fvisibility=hidden -flto -fno-fat-lto-objects -std=gnu++20 -o CMakeFiles/SModule.dir/t.cpp.o -c /home/radek/repos/sentiment_analysis/t.cpp",
-  "file": "/home/radek/repos/sentiment_analysis/t.cpp"
-},
-{
-  "directory": "/home/radek/repos/sentiment_analysis/build",
-  "command": "/usr/bin/c++   -std=gnu++20 -o CMakeFiles/SExecutable.dir/t.cpp.o -c /home/radek/repos/sentiment_analysis/t.cpp",
+  "command": "/usr/bin/c++ -Dsentiment_EXPORTS -isystem /home/radek/repos/sentiment_analysis/pybind11-2.11.1/include -isystem /usr/include/python3.11 -fPIC -fvisibility=hidden -flto -fno-fat-lto-objects -std=gnu++20 -o CMakeFiles/sentiment.dir/t.cpp.o -c /home/radek/repos/sentiment_analysis/t.cpp",
   "file": "/home/radek/repos/sentiment_analysis/t.cpp"
 }
 ]

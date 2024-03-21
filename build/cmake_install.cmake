@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/radek/repos/sentiment_analysis/build/_deps/pybind11-build/cmake_install.cmake")
+  include("/home/radek/repos/sentiment_analysis/build/pybind11-2.11.1/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
