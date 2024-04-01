@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/sentiment_executable.dir/t.cpp.o -o sentiment_executable  /home/radek/repos/sentiment_analysis/luabin/liblua53.a 

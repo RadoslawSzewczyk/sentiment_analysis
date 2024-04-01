@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/example_LuaMetaObject.dir/Example/example_LuaMetaObject.cpp.o -o example_LuaMetaObject  -Wl,-rpath,/home/radek/repos/sentiment_analysis/build/luacpp/Source libluacpp.so /usr/lib/x86_64-linux-gnu/liblua5.3.so -lm 

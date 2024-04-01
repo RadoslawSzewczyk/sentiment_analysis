@@ -14,6 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
+//Build documentation
+BUILD_DOC:BOOL=OFF
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -275,6 +278,12 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Dot tool for use with Doxygen
+DOXYGEN_DOT_EXECUTABLE:FILEPATH=DOXYGEN_DOT_EXECUTABLE-NOTFOUND
+
+//Doxygen documentation generation tool (https://www.doxygen.nl)
+DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
+
 //Directory under which to collect all populated content
 FETCHCONTENT_BASE_DIR:PATH=/home/radek/repos/sentiment_analysis/build/_deps
 
@@ -297,6 +306,24 @@ FETCHCONTENT_UPDATES_DISCONNECTED_PYBIND11:BOOL=OFF
 
 //Git command line client
 GIT_EXECUTABLE:FILEPATH=/usr/bin/git
+
+//Path to a file.
+LUA_INCLUDE_DIR:PATH=/usr/include/lua5.3
+
+//Path to a library.
+LUA_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/liblua5.3.so
+
+//Path to a library.
+LUA_MATH_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libm.so
+
+//Value Computed by CMake
+LuaCpp_BINARY_DIR:STATIC=/home/radek/repos/sentiment_analysis/build/luacpp/Source
+
+//Value Computed by CMake
+LuaCpp_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+LuaCpp_SOURCE_DIR:STATIC=/home/radek/repos/sentiment_analysis/luacpp/Source
 
 //Force new FindPython
 PYBIND11_FINDPYTHON:BOOL=OFF
@@ -330,6 +357,12 @@ PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3
 //Path to a library.
 PYTHON_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpython3.11.so
 
+//Dependencies for the target
+luacpp_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/liblua5.3.so;general;/usr/lib/x86_64-linux-gnu/libm.so;
+
+//Dependencies for the target
+luacpp_static_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/liblua5.3.so;general;/usr/lib/x86_64-linux-gnu/libm.so;
+
 //Value Computed by CMake
 pybind11_BINARY_DIR:STATIC=/home/radek/repos/sentiment_analysis/build/pybind11-2.11.1
 
@@ -347,6 +380,9 @@ sentiment_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 sentiment_SOURCE_DIR:STATIC=/home/radek/repos/sentiment_analysis
+
+//Path to a program.
+valgrind:FILEPATH=valgrind-NOTFOUND
 
 
 ########################
@@ -528,6 +564,12 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DOXYGEN_DOT_EXECUTABLE
+DOXYGEN_DOT_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DOXYGEN_EXECUTABLE
+DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
+//Details about finding Lua
+FIND_PACKAGE_MESSAGE_DETAILS_Lua:INTERNAL=[/usr/lib/x86_64-linux-gnu/liblua5.3.so;/usr/lib/x86_64-linux-gnu/libm.so][/usr/include/lua5.3][v5.3.6()]
 //Details about finding PYTHON
 FIND_PACKAGE_MESSAGE_DETAILS_PYTHON:INTERNAL=/usr/bin/python33.11.2
 //Details about finding PythonInterp
@@ -536,6 +578,12 @@ FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3][v3.11.2(3.
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //Test HAS_FLTO
 HAS_FLTO:INTERNAL=1
+//ADVANCED property for variable: LUA_INCLUDE_DIR
+LUA_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: LUA_LIBRARY
+LUA_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: LUA_MATH_LIBRARY
+LUA_MATH_LIBRARY-ADVANCED:INTERNAL=1
 PYBIND11_INCLUDE_DIR:INTERNAL=/home/radek/repos/sentiment_analysis/pybind11-2.11.1/include
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1

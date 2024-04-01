@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named sentiment
+# Target rules for targets named sentimentpy
 
 # Build rule for target.
-sentiment: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentiment
-.PHONY : sentiment
+sentimentpy: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentimentpy
+.PHONY : sentimentpy
 
 # fast build rule for target.
-sentiment/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentiment.dir/build.make CMakeFiles/sentiment.dir/build
-.PHONY : sentiment/fast
+sentimentpy/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/build
+.PHONY : sentimentpy/fast
 
 t.o: t.cpp.o
 .PHONY : t.o
 
 # target to build an object file
 t.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentiment.dir/build.make CMakeFiles/sentiment.dir/t.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/t.cpp.o
 .PHONY : t.cpp.o
 
 t.i: t.cpp.i
@@ -142,7 +142,7 @@ t.i: t.cpp.i
 
 # target to preprocess a source file
 t.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentiment.dir/build.make CMakeFiles/sentiment.dir/t.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/t.cpp.i
 .PHONY : t.cpp.i
 
 t.s: t.cpp.s
@@ -150,7 +150,7 @@ t.s: t.cpp.s
 
 # target to generate assembly for a file
 t.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentiment.dir/build.make CMakeFiles/sentiment.dir/t.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/t.cpp.s
 .PHONY : t.cpp.s
 
 # Help Target
@@ -161,7 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... sentiment"
+	@echo "... sentimentpy"
 	@echo "... t.o"
 	@echo "... t.i"
 	@echo "... t.s"

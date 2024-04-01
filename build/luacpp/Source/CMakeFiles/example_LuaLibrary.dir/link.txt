@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/example_LuaLibrary.dir/Example/example_LuaLibrary.cpp.o -o example_LuaLibrary  -Wl,-rpath,/home/radek/repos/sentiment_analysis/build/luacpp/Source libluacpp.so /usr/lib/x86_64-linux-gnu/liblua5.3.so -lm 

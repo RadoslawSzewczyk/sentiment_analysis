@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -Dsentiment_EXPORTS
 
-CXX_INCLUDES = -isystem /home/radek/repos/sentiment_analysis/pybind11-2.11.1/include -isystem /usr/include/python3.11
+CXX_INCLUDES = -I/home/radek/repos/sentiment_analysis/luacpp/Source -isystem /home/radek/repos/sentiment_analysis/pybind11-2.11.1/include -isystem /usr/include/python3.11
 
 CXX_FLAGS = -fPIC -fvisibility=hidden -flto -fno-fat-lto-objects -std=gnu++20
 

@@ -1,4 +1,4 @@
-/home/radek/repos/sentiment_analysis/build/CMakeFiles/sentiment.dir
+/home/radek/repos/sentiment_analysis/build/CMakeFiles/sentimentpy.dir
 /home/radek/repos/sentiment_analysis/build/CMakeFiles/edit_cache.dir
 /home/radek/repos/sentiment_analysis/build/CMakeFiles/rebuild_cache.dir
 /home/radek/repos/sentiment_analysis/build/pybind11-2.11.1/CMakeFiles/edit_cache.dir
