@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/radek/repos/sentiment_analysis/t.cpp" "CMakeFiles/sentimentpy.dir/t.cpp.o" "gcc" "CMakeFiles/sentimentpy.dir/t.cpp.o.d"
+  "/home/radek/repos/sentiment_analysis/main.cpp" "CMakeFiles/sentimentpy.dir/main.cpp.o" "gcc" "CMakeFiles/sentimentpy.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.

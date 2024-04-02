@@ -1,5 +1,0 @@
-if(EXISTS "/home/radek/repos/sentiment_analysis/build/luacpp/Source/testLuaMetaObject[1]_tests.cmake")
-  include("/home/radek/repos/sentiment_analysis/build/luacpp/Source/testLuaMetaObject[1]_tests.cmake")
-else()
-  add_test(testLuaMetaObject_NOT_BUILT testLuaMetaObject_NOT_BUILT)
-endif()

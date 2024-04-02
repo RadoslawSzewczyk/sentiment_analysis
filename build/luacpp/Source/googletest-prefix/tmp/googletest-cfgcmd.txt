@@ -1,1 +1,0 @@
-cmd='/usr/bin/cmake;-DCMAKE_INSTALL_PREFIX=/home/radek/repos/sentiment_analysis/build/luacpp/Source/googletest-install;-DINCLUDE_INSTALL_DIR=/home/radek/repos/sentiment_analysis/build/luacpp/Source/googletest-install;-GUnix Makefiles;<SOURCE_DIR><SOURCE_SUBDIR>'

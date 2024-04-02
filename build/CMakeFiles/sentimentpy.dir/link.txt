@@ -1,1 +1,1 @@
-/usr/bin/c++ -fPIC -flto -shared  -o sentimentpy.cpython-311-x86_64-linux-gnu.so CMakeFiles/sentimentpy.dir/t.cpp.o  /usr/lib/x86_64-linux-gnu/liblua5.3.so -lm 
+/usr/bin/g++ -fPIC -g -shared  -o sentimentpy.cpython-311-x86_64-linux-gnu.so CMakeFiles/sentimentpy.dir/main.cpp.o  /usr/lib/x86_64-linux-gnu/liblua5.3.so -lm 

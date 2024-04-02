@@ -1,5 +1,0 @@
-if(EXISTS "/home/radek/repos/sentiment_analysis/build/luacpp/Source/testLuaContext[1]_tests.cmake")
-  include("/home/radek/repos/sentiment_analysis/build/luacpp/Source/testLuaContext[1]_tests.cmake")
-else()
-  add_test(testLuaContext_NOT_BUILT testLuaContext_NOT_BUILT)
-endif()

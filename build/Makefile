@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named precompile_module_interface
+
+# Build rule for target.
+precompile_module_interface: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 precompile_module_interface
+.PHONY : precompile_module_interface
+
+# fast build rule for target.
+precompile_module_interface/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/precompile_module_interface.dir/build.make CMakeFiles/precompile_module_interface.dir/build
+.PHONY : precompile_module_interface/fast
+
+#=============================================================================
 # Target rules for targets named sentimentpy
 
 # Build rule for target.
@@ -129,29 +142,29 @@ sentimentpy/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/build
 .PHONY : sentimentpy/fast
 
-t.o: t.cpp.o
-.PHONY : t.o
+main.o: main.cpp.o
+.PHONY : main.o
 
 # target to build an object file
-t.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/t.cpp.o
-.PHONY : t.cpp.o
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-t.i: t.cpp.i
-.PHONY : t.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-t.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/t.cpp.i
-.PHONY : t.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-t.s: t.cpp.s
-.PHONY : t.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-t.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/t.cpp.s
-.PHONY : t.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -161,10 +174,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... precompile_module_interface"
 	@echo "... sentimentpy"
-	@echo "... t.o"
-	@echo "... t.i"
-	@echo "... t.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

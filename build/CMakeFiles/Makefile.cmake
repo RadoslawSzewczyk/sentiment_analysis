@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/home/radek/repos/sentiment_analysis/CMakeLists.txt"
-  "CMakeFiles/3.25.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.25.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.25.1/CMakeSystem.cmake"
   "/home/radek/repos/sentiment_analysis/pybind11-2.11.1/CMakeLists.txt"
@@ -16,7 +15,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/radek/repos/sentiment_analysis/pybind11-2.11.1/tools/JoinPaths.cmake"
   "/home/radek/repos/sentiment_analysis/pybind11-2.11.1/tools/pybind11Common.cmake"
   "/home/radek/repos/sentiment_analysis/pybind11-2.11.1/tools/pybind11Tools.cmake"
-  "/usr/share/cmake-3.25/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.25/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.25/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
   "/usr/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake"
@@ -31,7 +29,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.25/Modules/CheckCXXCompilerFlag.cmake"
   "/usr/share/cmake-3.25/Modules/CheckCXXSourceCompiles.cmake"
   "/usr/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
-  "/usr/share/cmake-3.25/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-3.25/Modules/Compiler/GNU-CXX.cmake"
   "/usr/share/cmake-3.25/Modules/Compiler/GNU.cmake"
   "/usr/share/cmake-3.25/Modules/FindLua.cmake"
@@ -42,7 +39,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.25/Modules/Internal/CheckCompilerFlag.cmake"
   "/usr/share/cmake-3.25/Modules/Internal/CheckFlagCommonConfig.cmake"
   "/usr/share/cmake-3.25/Modules/Internal/CheckSourceCompiles.cmake"
-  "/usr/share/cmake-3.25/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/share/cmake-3.25/Modules/Platform/Linux-GNU-CXX.cmake"
   "/usr/share/cmake-3.25/Modules/Platform/Linux-GNU.cmake"
   "/usr/share/cmake-3.25/Modules/Platform/Linux.cmake"
@@ -64,5 +60,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/precompile_module_interface.dir/DependInfo.cmake"
   "CMakeFiles/sentimentpy.dir/DependInfo.cmake"
   )

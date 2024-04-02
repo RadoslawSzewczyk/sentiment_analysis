@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -flto -shared  -o SModule.cpython-311-x86_64-linux-gnu.so CMakeFiles/SModule.dir/t.cpp.o 

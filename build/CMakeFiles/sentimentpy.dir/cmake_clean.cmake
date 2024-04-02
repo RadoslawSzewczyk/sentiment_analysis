@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/sentimentpy.dir/t.cpp.o"
-  "CMakeFiles/sentimentpy.dir/t.cpp.o.d"
+  "CMakeFiles/sentimentpy.dir/main.cpp.o"
+  "CMakeFiles/sentimentpy.dir/main.cpp.o.d"
   "sentimentpy.cpython-311-x86_64-linux-gnu.so"
   "sentimentpy.pdb"
 )
