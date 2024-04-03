@@ -1,6 +1,5 @@
 # include <pybind11/pybind11.h>
-# include <string> 
-# include <fstream>
+# include "data.h"
 
 extern "C" {
 #include "lua.h"
@@ -23,19 +22,15 @@ int func(int a, int b) {
     int result = lua_tointeger(L, -1);
     
     lua_close(L);
-
+    
     return result;
 }
 
-std::string helloo()
-{
-    static std::string s = "hello";
-    return s.c_str();
-}
 namespace py = pybind11;
 
 PYBIND11_MODULE(sentimentpy, m) {
-    m.def("add", [](int a, int b) { return a + b; }, "A function that adds two numbers");
-    m.def("addL", &func, "Func");
-    m.def("hello", &helloo, "fun");
+    //m.def("processAndTokenizeFile", &dataHandle::tokenize);
+    py::class_<dataHandle>(m, "dataHandle")
+        .def_static("processAndTokenizeFilee", &dataHandle::processAndTokenizeFilee, "Processes and tokenizes file content");
+
 }

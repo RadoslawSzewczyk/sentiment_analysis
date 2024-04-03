@@ -367,7 +367,44 @@ CMakeFiles/sentimentpy.dir/main.cpp.o: \
  /home/radek/repos/sentiment_analysis/pybind11-2.11.1/include/pybind11/options.h \
  /home/radek/repos/sentiment_analysis/pybind11-2.11.1/include/pybind11/detail/init.h \
  /home/radek/repos/sentiment_analysis/pybind11-2.11.1/include/pybind11/gil.h \
- /usr/include/lua5.3/lua.h /usr/include/lua5.3/luaconf.h \
+ /home/radek/repos/sentiment_analysis/data.h \
+ /usr/include/c++/12/filesystem /usr/include/c++/12/bits/fs_fwd.h \
+ /usr/include/c++/12/bits/chrono.h /usr/include/c++/12/ratio \
+ /usr/include/c++/12/ctime /usr/include/c++/12/bits/parse_numbers.h \
+ /usr/include/c++/12/bits/fs_path.h /usr/include/c++/12/locale \
+ /usr/include/c++/12/bits/locale_facets_nonio.h \
+ /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/12/bits/codecvt.h \
+ /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/12/bits/locale_conv.h /usr/include/c++/12/iomanip \
+ /usr/include/c++/12/bits/quoted_string.h /usr/include/c++/12/sstream \
+ /usr/include/c++/12/istream /usr/include/c++/12/bits/istream.tcc \
+ /usr/include/c++/12/bits/sstream.tcc /usr/include/c++/12/codecvt \
+ /usr/include/c++/12/bits/fs_dir.h /usr/include/c++/12/bits/fs_ops.h \
+ /usr/include/c++/12/regex /usr/include/c++/12/bitset \
+ /usr/include/c++/12/stack /usr/include/c++/12/deque \
+ /usr/include/c++/12/bits/stl_deque.h /usr/include/c++/12/bits/deque.tcc \
+ /usr/include/c++/12/bits/stl_stack.h /usr/include/c++/12/bits/stl_tree.h \
+ /usr/include/c++/12/bits/stl_map.h \
+ /usr/include/c++/12/bits/regex_constants.h \
+ /usr/include/c++/12/bits/regex_error.h \
+ /usr/include/c++/12/bits/regex_automaton.h \
+ /usr/include/c++/12/bits/regex_automaton.tcc \
+ /usr/include/c++/12/bits/regex_scanner.h \
+ /usr/include/c++/12/bits/regex_scanner.tcc \
+ /usr/include/c++/12/bits/regex_compiler.h \
+ /usr/include/c++/12/bits/regex_compiler.tcc \
+ /usr/include/c++/12/bits/regex.h /usr/include/c++/12/bits/regex.tcc \
+ /usr/include/c++/12/bits/regex_executor.h \
+ /usr/include/c++/12/bits/regex_executor.tcc /usr/include/c++/12/fstream \
+ /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
+ /usr/include/c++/12/bits/fstream.tcc /usr/include/c++/12/algorithm \
+ /usr/include/c++/12/bits/ranges_algo.h \
+ /usr/include/c++/12/bits/ranges_util.h \
+ /usr/include/c++/12/pstl/glue_algorithm_defs.h /usr/include/lua5.3/lua.h \
+ /usr/include/lua5.3/luaconf.h \
  /usr/include/x86_64-linux-gnu/lua5.3-deb-multiarch.h \
  /usr/include/lua5.3/lauxlib.h /usr/include/lua5.3/lua.h \
  /usr/include/lua5.3/lualib.h

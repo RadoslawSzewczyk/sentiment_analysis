@@ -1,7 +1,7 @@
 [
 {
   "directory": "/home/radek/repos/sentiment_analysis/build",
-  "command": "/usr/bin/g++ -Dsentimentpy_EXPORTS -I/usr/include/lua5.3 -isystem /home/radek/repos/sentiment_analysis/pybind11-2.11.1/include -isystem /usr/include/python3.11 -g -fPIC -fvisibility=hidden -fmodules-ts -std=gnu++20 -o CMakeFiles/sentimentpy.dir/main.cpp.o -c /home/radek/repos/sentiment_analysis/main.cpp",
+  "command": "/usr/bin/g++ -Dsentimentpy_EXPORTS -I/usr/include/lua5.3 -isystem /home/radek/repos/sentiment_analysis/pybind11-2.11.1/include -isystem /usr/include/python3.11 -g -fPIC -fvisibility=hidden -std=gnu++20 -o CMakeFiles/sentimentpy.dir/main.cpp.o -c /home/radek/repos/sentiment_analysis/main.cpp",
   "file": "/home/radek/repos/sentiment_analysis/main.cpp"
 }
 ]

@@ -117,19 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named precompile_module_interface
-
-# Build rule for target.
-precompile_module_interface: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 precompile_module_interface
-.PHONY : precompile_module_interface
-
-# fast build rule for target.
-precompile_module_interface/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/precompile_module_interface.dir/build.make CMakeFiles/precompile_module_interface.dir/build
-.PHONY : precompile_module_interface/fast
-
-#=============================================================================
 # Target rules for targets named sentimentpy
 
 # Build rule for target.
@@ -174,7 +161,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... precompile_module_interface"
 	@echo "... sentimentpy"
 	@echo "... main.o"
 	@echo "... main.i"

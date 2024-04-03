@@ -1,9 +1,11 @@
-export module data;
-#include <string>
+# include "data.h"
 
-
-// export std::string hello()
-// {
-//     static std::string s = "hello";
-//     return s.c_str();
-// }
+std::vector<std::string> dataHandle::tokenize(const std::string& str) {
+    std::vector<std::string> tokens;
+    std::istringstream iss(str);
+    std::string token;
+    while (iss >> token) {
+        tokens.push_back(token);
+    }
+    return tokens;
+}
