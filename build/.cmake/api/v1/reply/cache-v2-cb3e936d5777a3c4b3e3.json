@@ -1343,7 +1343,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/liblua5.3.so;/usr/lib/x86_64-linux-gnu/libm.so][/usr/include/lua5.3][v5.3.6()]"
+			"value" : "[/usr/lib/x86_64-linux-gnu/liblua5.3.so;/usr/lib/x86_64-linux-gnu/libm.so][/home/radek/repos/sentiment_analysis/luabin/include][v5.3.6()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PYTHON",
@@ -1395,7 +1395,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/lua5.3"
+			"value" : "LUA_INCLUDE_DIR-NOTFOUND"
 		},
 		{
 			"name" : "LUA_LIBRARY",

@@ -12,8 +12,8 @@
 		[
 			"add_library",
 			"pybind11_add_module",
-			"target_link_libraries",
-			"target_include_directories"
+			"target_include_directories",
+			"target_link_libraries"
 		],
 		"files" : 
 		[
@@ -28,7 +28,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 11,
+				"line" : 13,
 				"parent" : 0
 			},
 			{
@@ -40,17 +40,11 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 15,
+				"line" : 16,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
-				"file" : 1,
-				"line" : 14,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
 				"file" : 0,
 				"line" : 179,
 				"parent" : 1
@@ -78,16 +72,16 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 4,
-					"path" : "/usr/include/lua5.3"
+					"backtrace" : 3,
+					"path" : "/home/radek/repos/sentiment_analysis/luabin/include"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 4,
 					"isSystem" : true,
 					"path" : "/home/radek/repos/sentiment_analysis/pybind11-2.11.1/include"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 4,
 					"isSystem" : true,
 					"path" : "/usr/include/python3.11"
 				}
@@ -97,9 +91,9 @@
 			{
 				"backtraces" : 
 				[
-					5,
-					5,
-					5
+					4,
+					4,
+					4
 				],
 				"standard" : "20"
 			},
@@ -119,12 +113,15 @@
 				"role" : "flags"
 			},
 			{
-				"backtrace" : 3,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/liblua5.3.so",
+				"fragment" : "-L/home/radek/repos/sentiment_analysis/luabin",
+				"role" : "libraryPath"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/radek/repos/sentiment_analysis/luabin",
 				"role" : "libraries"
 			},
 			{
-				"fragment" : "-lm",
+				"fragment" : "-llua53",
 				"role" : "libraries"
 			}
 		],

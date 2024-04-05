@@ -29,8 +29,7 @@ int func(int a, int b) {
 namespace py = pybind11;
 
 PYBIND11_MODULE(sentimentpy, m) {
-    //m.def("processAndTokenizeFile", &dataHandle::tokenize);
     py::class_<dataHandle>(m, "dataHandle")
-        .def_static("processAndTokenizeFilee", &dataHandle::processAndTokenizeFilee, "Processes and tokenizes file content");
+        .def_static("processAndTokenizeFilee", &dataHandle::hello, "Processes and tokenizes file content");
 
 }

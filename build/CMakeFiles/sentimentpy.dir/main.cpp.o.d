@@ -403,8 +403,9 @@ CMakeFiles/sentimentpy.dir/main.cpp.o: \
  /usr/include/c++/12/bits/fstream.tcc /usr/include/c++/12/algorithm \
  /usr/include/c++/12/bits/ranges_algo.h \
  /usr/include/c++/12/bits/ranges_util.h \
- /usr/include/c++/12/pstl/glue_algorithm_defs.h /usr/include/lua5.3/lua.h \
- /usr/include/lua5.3/luaconf.h \
- /usr/include/x86_64-linux-gnu/lua5.3-deb-multiarch.h \
- /usr/include/lua5.3/lauxlib.h /usr/include/lua5.3/lua.h \
- /usr/include/lua5.3/lualib.h
+ /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+ /home/radek/repos/sentiment_analysis/luabin/include/lua.h \
+ /home/radek/repos/sentiment_analysis/luabin/include/luaconf.h \
+ /home/radek/repos/sentiment_analysis/luabin/include/lauxlib.h \
+ /home/radek/repos/sentiment_analysis/luabin/include/lua.h \
+ /home/radek/repos/sentiment_analysis/luabin/include/lualib.h

@@ -83,21 +83,6 @@
 			"path" : "/usr/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake"
 		},
 		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/share/cmake-3.25/Modules/FindLua.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/share/cmake-3.25/Modules/FindPackageMessage.cmake"
-		},
-		{
 			"path" : "pybind11-2.11.1/CMakeLists.txt"
 		},
 		{

@@ -92,8 +92,7 @@ sentimentpy_EXTERNAL_OBJECTS =
 
 sentimentpy.cpython-311-x86_64-linux-gnu.so: CMakeFiles/sentimentpy.dir/main.cpp.o
 sentimentpy.cpython-311-x86_64-linux-gnu.so: CMakeFiles/sentimentpy.dir/build.make
-sentimentpy.cpython-311-x86_64-linux-gnu.so: /usr/lib/x86_64-linux-gnu/liblua5.3.so
-sentimentpy.cpython-311-x86_64-linux-gnu.so: /usr/lib/x86_64-linux-gnu/libm.so
+sentimentpy.cpython-311-x86_64-linux-gnu.so: /home/radek/repos/sentiment_analysis/luabin/liblua53.so
 sentimentpy.cpython-311-x86_64-linux-gnu.so: CMakeFiles/sentimentpy.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/radek/repos/sentiment_analysis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared module sentimentpy.cpython-311-x86_64-linux-gnu.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sentimentpy.dir/link.txt --verbose=$(VERBOSE)

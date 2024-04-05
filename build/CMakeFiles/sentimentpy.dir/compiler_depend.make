@@ -500,21 +500,18 @@ CMakeFiles/sentimentpy.dir/main.cpp.o: /home/radek/repos/sentiment_analysis/main
   /usr/include/c++/12/bits/ranges_algo.h \
   /usr/include/c++/12/bits/ranges_util.h \
   /usr/include/c++/12/pstl/glue_algorithm_defs.h \
-  /usr/include/lua5.3/lua.h \
-  /usr/include/lua5.3/luaconf.h \
-  /usr/include/x86_64-linux-gnu/lua5.3-deb-multiarch.h \
-  /usr/include/lua5.3/lauxlib.h \
-  /usr/include/lua5.3/lua.h \
-  /usr/include/lua5.3/lualib.h
+  /home/radek/repos/sentiment_analysis/luabin/include/lua.h \
+  /home/radek/repos/sentiment_analysis/luabin/include/luaconf.h \
+  /home/radek/repos/sentiment_analysis/luabin/include/lauxlib.h \
+  /home/radek/repos/sentiment_analysis/luabin/include/lua.h \
+  /home/radek/repos/sentiment_analysis/luabin/include/lualib.h
 
 
-/usr/include/lua5.3/lauxlib.h:
+/home/radek/repos/sentiment_analysis/luabin/include/lualib.h:
 
-/usr/include/x86_64-linux-gnu/lua5.3-deb-multiarch.h:
+/home/radek/repos/sentiment_analysis/luabin/include/lauxlib.h:
 
-/usr/include/lua5.3/luaconf.h:
-
-/usr/include/lua5.3/lua.h:
+/home/radek/repos/sentiment_analysis/luabin/include/lua.h:
 
 /usr/include/c++/12/bits/ranges_util.h:
 
@@ -570,6 +567,8 @@ CMakeFiles/sentimentpy.dir/main.cpp.o: /home/radek/repos/sentiment_analysis/main
 
 /home/radek/repos/sentiment_analysis/pybind11-2.11.1/include/pybind11/options.h:
 
+/home/radek/repos/sentiment_analysis/luabin/include/luaconf.h:
+
 /usr/include/c++/12/bits/std_function.h:
 
 /usr/include/c++/12/array:
@@ -591,8 +590,6 @@ CMakeFiles/sentimentpy.dir/main.cpp.o: /home/radek/repos/sentiment_analysis/main
 /home/radek/repos/sentiment_analysis/pybind11-2.11.1/include/pybind11/cast.h:
 
 /usr/include/c++/12/version:
-
-/usr/include/lua5.3/lualib.h:
 
 /usr/include/c++/12/bits/stl_bvector.h:
 
