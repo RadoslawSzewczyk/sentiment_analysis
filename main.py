@@ -1,3 +1,2 @@
-from build import sentimentpy as sen
-
-sen.Test()
+from build import hello
+print(hello.greet())

@@ -1,0 +1,1 @@
+/usr/bin/gcc -fPIC -shared -Wl,-soname,hello.so -o hello.so CMakeFiles/hello.dir/main.cpp.o  /usr/lib/x86_64-linux-gnu/libboost_python311.so.1.74.0

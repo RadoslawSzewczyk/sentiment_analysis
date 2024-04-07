@@ -85,6 +85,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/local/cmake-3.29.1-linux-x86_64/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/local/cmake-3.29.1-linux-x86_64/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/local/cmake-3.29.1-linux-x86_64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/local/cmake-3.29.1-linux-x86_64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/local/cmake-3.29.1-linux-x86_64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/local/cmake-3.29.1-linux-x86_64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/radek/repos/sentiment_analysis/build/CMakeFiles /home/radek/repos/sentiment_analysis/build//CMakeFiles/progress.marks
@@ -117,37 +162,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named data
+# Target rules for targets named hello
 
 # Build rule for target.
-data: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 data
-.PHONY : data
+hello: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hello
+.PHONY : hello
 
 # fast build rule for target.
-data/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data.dir/build.make CMakeFiles/data.dir/build
-.PHONY : data/fast
-
-#=============================================================================
-# Target rules for targets named sentimentpy
-
-# Build rule for target.
-sentimentpy: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentimentpy
-.PHONY : sentimentpy
-
-# fast build rule for target.
-sentimentpy/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/build
-.PHONY : sentimentpy/fast
+hello/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
+.PHONY : hello/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -155,7 +187,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -163,35 +195,8 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-mod.o: mod.cpp.o
-.PHONY : mod.o
-
-# target to build an object file
-mod.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data.dir/build.make CMakeFiles/data.dir/mod.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/mod.cpp.o
-.PHONY : mod.cpp.o
-
-mod.i: mod.cpp.i
-.PHONY : mod.i
-
-# target to preprocess a source file
-mod.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data.dir/build.make CMakeFiles/data.dir/mod.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/mod.cpp.i
-.PHONY : mod.cpp.i
-
-mod.s: mod.cpp.s
-.PHONY : mod.s
-
-# target to generate assembly for a file
-mod.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data.dir/build.make CMakeFiles/data.dir/mod.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/mod.cpp.s
-.PHONY : mod.cpp.s
 
 # Help Target
 help:
@@ -200,15 +205,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... data"
-	@echo "... sentimentpy"
+	@echo "... hello"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... mod.o"
-	@echo "... mod.i"
-	@echo "... mod.s"
 .PHONY : help
 
 

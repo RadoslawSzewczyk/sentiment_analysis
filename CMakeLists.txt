@@ -1,16 +1,23 @@
-set(CMAKE_CXX_COMPILER "/usr/bin/gcc")
-cmake_minimum_required(VERSION 3.29)
-project(sentiment LANGUAGES CXX)
+cmake_minimum_required(VERSION 3.16)
+project(hello_cmake_boost_python)
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_EXTENSIONS OFF)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -fmodules-ts -std=c++20 -fmax-errors=10 -DPYBIND11_INSTALL=ON -DPYBIND11_TEST=OFF -DPYBIND11_PYTHON_VERSION=3.11")
-set(CMAKE_CXX_SCAN_FOR_MODULES 0)
-# -fmodules-ts gcc
-add_library(data mod.cpp)
-add_subdirectory(pybind11-2.11.1)
+# find the python include libraries on our system and our boost installation
+find_package(Python3 REQUIRED COMPONENTS Development NumPy)
+find_package(Boost REQUIRED COMPONENTS python3)
 
-pybind11_add_module(sentimentpy MODULE mod.cpp main.cpp)
 
-target_include_directories(sentimentpy PRIVATE /usr/include/python3.11)
+# create our "hello" shared library (.so) which will be imported from Python
+add_library(hello SHARED main.cpp)
+
+# make sure our library can find the python headers
+target_include_directories(hello PRIVATE ${Python3_INCLUDE_DIRS})
+
+# don't add "lib" in front, so that it can be imported from python
+set_target_properties(hello PROPERTIES PREFIX "")
+target_link_libraries(hello
+    ${Boost_LIBRARIES}
+    Python3::NumPy
+    )
+
+# add an install target to the build tool which can be called e.g. "make install"
+install(TARGETS hello DESTINATION lib)

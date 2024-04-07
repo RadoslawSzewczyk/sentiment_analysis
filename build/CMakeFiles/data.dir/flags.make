@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/gcc
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/usr/include/python3.11
 
-CXX_FLAGS =  -fmodules-ts -std=c++20 -fmax-errors=10 -DPYBIND11_INSTALL=ON -DPYBIND11_TEST=OFF -DPYBIND11_PYTHON_VERSION=3.11 -std=c++20
+CXX_FLAGS =  -std=c++20 -fmax-errors=10 -Wl,--no-as-needed -std=c++20
 

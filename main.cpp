@@ -1,13 +1,15 @@
-import data;
-# include <pybind11/pybind11.h>
+#include <boost/python.hpp>
 
-namespace py = pybind11;
+#include <iostream>
 
-void wrap(){
-    dataHandle::processAndTokenizeFile();
+char const *greet()
+{
+    return "Hello world!";
 }
 
-PYBIND11_MODULE(sentimentpy, m) {
-    m.def("Test", &wrap);
 
+BOOST_PYTHON_MODULE(hello)
+{
+    using namespace boost::python;
+    def("greet", greet);
 }

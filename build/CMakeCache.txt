@@ -14,6 +14,17 @@
 # EXTERNAL cache entries
 ########################
 
+//The directory containing a CMake configuration file for Arrow.
+Arrow_DIR:PATH=Arrow_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/usr/include
+
+Boost_PYTHON_LIBRARY_RELEASE:STRING=/usr/lib/x86_64-linux-gnu/libboost_python311.so.1.74.0
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -50,6 +61,32 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
+//C compiler
+CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+
+//A wrapper around 'ar' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-12
+
+//A wrapper around 'ranlib' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-12
+
+//Flags used by the C compiler during all build types.
+CMAKE_C_FLAGS:STRING=
+
+//Flags used by the C compiler during DEBUG builds.
+CMAKE_C_FLAGS_DEBUG:STRING=-g
+
+//Flags used by the C compiler during MINSIZEREL builds.
+CMAKE_C_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
+
+//Flags used by the C compiler during RELEASE builds.
+CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+
+//Flags used by the C compiler during RELWITHDEBINFO builds.
+CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+
 //Path to a program.
 CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
 
@@ -74,56 +111,8 @@ CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 //Value Computed by CMake.
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/home/radek/repos/sentiment_analysis/build/CMakeFiles/pkgRedirects
 
-//User executables (bin)
-CMAKE_INSTALL_BINDIR:PATH=bin
-
-//Read-only architecture-independent data (DATAROOTDIR)
-CMAKE_INSTALL_DATADIR:PATH=
-
-//Read-only architecture-independent data root (share)
-CMAKE_INSTALL_DATAROOTDIR:PATH=share
-
-//Documentation root (DATAROOTDIR/doc/PROJECT_NAME)
-CMAKE_INSTALL_DOCDIR:PATH=
-
-//C header files (include)
-CMAKE_INSTALL_INCLUDEDIR:PATH=include
-
-//Info documentation (DATAROOTDIR/info)
-CMAKE_INSTALL_INFODIR:PATH=
-
-//Object code libraries (lib)
-CMAKE_INSTALL_LIBDIR:PATH=lib
-
-//Program executables (libexec)
-CMAKE_INSTALL_LIBEXECDIR:PATH=libexec
-
-//Locale-dependent data (DATAROOTDIR/locale)
-CMAKE_INSTALL_LOCALEDIR:PATH=
-
-//Modifiable single-machine data (var)
-CMAKE_INSTALL_LOCALSTATEDIR:PATH=var
-
-//Man documentation (DATAROOTDIR/man)
-CMAKE_INSTALL_MANDIR:PATH=
-
-//C header files for non-gcc (/usr/include)
-CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
-
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
-
-//Run-time variable data (LOCALSTATEDIR/run)
-CMAKE_INSTALL_RUNSTATEDIR:PATH=
-
-//System admin executables (sbin)
-CMAKE_INSTALL_SBINDIR:PATH=sbin
-
-//Modifiable architecture-independent data (com)
-CMAKE_INSTALL_SHAREDSTATEDIR:PATH=com
-
-//Read-only single-machine data (etc)
-CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=/usr/bin/ld
@@ -167,22 +156,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=sentiment
-
-//Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=2.11.1
-
-//Value Computed by CMake
-CMAKE_PROJECT_VERSION_MAJOR:STATIC=2
-
-//Value Computed by CMake
-CMAKE_PROJECT_VERSION_MINOR:STATIC=11
-
-//Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=1
-
-//Value Computed by CMake
-CMAKE_PROJECT_VERSION_TWEAK:STATIC=
+CMAKE_PROJECT_NAME:STATIC=hello_cmake_boost_python
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -249,46 +223,44 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Force new FindPython
-PYBIND11_FINDPYTHON:BOOL=OFF
-
-//Install pybind11 header files?
-PYBIND11_INSTALL:BOOL=OFF
-
-//Override the ABI version, may be used to enable the unstable
-// ABI.
-PYBIND11_INTERNALS_VERSION:STRING=
-
-//Disable search for Python
-PYBIND11_NOPYTHON:BOOL=OFF
-
-//Overwrite cached values read from Python library (classic search).
-// Turn off if cross-compiling and manually setting these values.
-PYBIND11_PYTHONLIBS_OVERWRITE:BOOL=ON
-
-//Python version to use for compiling modules
-PYBIND11_PYTHON_VERSION:STRING=
-
-//Use simpler GIL management logic that does not support disassociation
-PYBIND11_SIMPLE_GIL_MANAGEMENT:BOOL=OFF
-
-//Build pybind11 test suite?
-PYBIND11_TEST:BOOL=OFF
-
-//Path to a program.
-PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3
+//Path to a library.
+PYTHON_LIBRARY:FILEPATH=PYTHON_LIBRARY-NOTFOUND
 
 //Path to a library.
-PYTHON_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpython3.11.so
+PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+PYTHON_LIBRARY_RELEASE:FILEPATH=PYTHON_LIBRARY_RELEASE-NOTFOUND
 
 //Value Computed by CMake
-pybind11_BINARY_DIR:STATIC=/home/radek/repos/sentiment_analysis/build/pybind11-2.11.1
+Project_BINARY_DIR:STATIC=/home/radek/repos/sentiment_analysis/build
 
 //Value Computed by CMake
-pybind11_IS_TOP_LEVEL:STATIC=OFF
+Project_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-pybind11_SOURCE_DIR:STATIC=/home/radek/repos/sentiment_analysis/pybind11-2.11.1
+Project_SOURCE_DIR:STATIC=/home/radek/repos/sentiment_analysis
+
+//The directory containing a CMake configuration file for PythonLibs.
+PythonLibs_DIR:PATH=PythonLibs_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for boost_headers.
+boost_headers_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.74.0
+
+//The directory containing a CMake configuration file for boost_python.
+boost_python_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_python-1.74.0
+
+//Value Computed by CMake
+hello_cmake_boost_python_BINARY_DIR:STATIC=/home/radek/repos/sentiment_analysis/build
+
+//Value Computed by CMake
+hello_cmake_boost_python_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+hello_cmake_boost_python_SOURCE_DIR:STATIC=/home/radek/repos/sentiment_analysis
+
+//Dependencies for the target
+hello_ext_LIB_DEPENDS:STATIC=general;Boost::python;
 
 //Value Computed by CMake
 sentiment_BINARY_DIR:STATIC=/home/radek/repos/sentiment_analysis/build
@@ -304,6 +276,8 @@ sentiment_SOURCE_DIR:STATIC=/home/radek/repos/sentiment_analysis
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -338,6 +312,22 @@ CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBINFO
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER
+CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER_AR
+CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER_RANLIB
+CMAKE_C_COMPILER_RANLIB-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS
+CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
+CMAKE_C_FLAGS_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_MINSIZEREL
+CMAKE_C_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_RELEASE
+CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_RELWITHDEBINFO
+CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_DLLTOOL
 CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
 //Path to cache edit program executable.
@@ -369,40 +359,8 @@ CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/home/radek/repos/sentiment_analysis
-//ADVANCED property for variable: CMAKE_INSTALL_BINDIR
-CMAKE_INSTALL_BINDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_DATADIR
-CMAKE_INSTALL_DATADIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_DATAROOTDIR
-CMAKE_INSTALL_DATAROOTDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_DOCDIR
-CMAKE_INSTALL_DOCDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_INCLUDEDIR
-CMAKE_INSTALL_INCLUDEDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_INFODIR
-CMAKE_INSTALL_INFODIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_LIBDIR
-CMAKE_INSTALL_LIBDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_LIBEXECDIR
-CMAKE_INSTALL_LIBEXECDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_LOCALEDIR
-CMAKE_INSTALL_LOCALEDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_LOCALSTATEDIR
-CMAKE_INSTALL_LOCALSTATEDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_MANDIR
-CMAKE_INSTALL_MANDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_OLDINCLUDEDIR
-CMAKE_INSTALL_OLDINCLUDEDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_RUNSTATEDIR
-CMAKE_INSTALL_RUNSTATEDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_SBINDIR
-CMAKE_INSTALL_SBINDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_SHAREDSTATEDIR
-CMAKE_INSTALL_SHAREDSTATEDIR-ADVANCED:INTERNAL=1
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_SYSCONFDIR
-CMAKE_INSTALL_SYSCONFDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MAKE_PROGRAM
@@ -420,7 +378,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -465,35 +423,58 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//Details about finding PYTHON
-FIND_PACKAGE_MESSAGE_DETAILS_PYTHON:INTERNAL=/usr/bin/python33.11.2
-//Details about finding PythonInterp
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3][v3.11.2(3.6)]
-//Test HAS_FLTO
-HAS_FLTO:INTERNAL=1
-PYBIND11_INCLUDE_DIR:INTERNAL=/home/radek/repos/sentiment_analysis/pybind11-2.11.1/include
-//ADVANCED property for variable: PYTHON_EXECUTABLE
-PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
-PYTHON_INCLUDE_DIRS:INTERNAL=/usr/include/python3.11
-PYTHON_IS_DEBUG:INTERNAL=0
-PYTHON_LIBRARIES:INTERNAL=/usr/lib/x86_64-linux-gnu/libpython3.11.so
+//Details about finding Boost
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake][cfound components: python3 ][v1.74.0()]
+//Details about finding Python
+FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/usr/include/python3.11][/usr/lib/x86_64-linux-gnu/libpython3.11.so][cfound components: Development Development.Module Development.Embed ][v3.11.2()]
+//Details about finding Python3
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/include/python3.11][/usr/lib/x86_64-linux-gnu/libpython3.11.so][/home/radek/.local/lib/python3.11/site-packages/numpy/core/include][cfound components: Development NumPy Interpreter Development.Module Development.Embed ][v3.11.2()]
 //ADVANCED property for variable: PYTHON_LIBRARY
 PYTHON_LIBRARY-ADVANCED:INTERNAL=1
-PYTHON_MODULE_EXTENSION:INTERNAL=.cpython-311-x86_64-linux-gnu.so
-PYTHON_MODULE_PREFIX:INTERNAL=
-PYTHON_VERSION:INTERNAL=3.11.2
-PYTHON_VERSION_MAJOR:INTERNAL=3
-PYTHON_VERSION_MINOR:INTERNAL=11
-Python_ADDITIONAL_VERSIONS:INTERNAL=3.11;3.10;3.9;3.8;3.7;3.6
+//ADVANCED property for variable: PYTHON_LIBRARY_DEBUG
+PYTHON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PYTHON_LIBRARY_RELEASE
+PYTHON_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
-//CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
-_Python:INTERNAL=PYTHON
-//True if pybind11 and all required components found on the system
-pybind11_FOUND:INTERNAL=TRUE
-//Directory where pybind11 headers are located
-pybind11_INCLUDE_DIR:INTERNAL=/home/radek/repos/sentiment_analysis/pybind11-2.11.1/include
-//Directories where pybind11 and possibly Python headers are located
-pybind11_INCLUDE_DIRS:INTERNAL=/home/radek/repos/sentiment_analysis/pybind11-2.11.1/include;/usr/include/python3.11
+//Compiler reason failure
+_Python3_Compiler_REASON_FAILURE:INTERNAL=
+_Python3_DEVELOPMENT_EMBED_SIGNATURE:INTERNAL=cae57a040e5a7a1c45ae7191cd9145e0
+_Python3_DEVELOPMENT_MODULE_SIGNATURE:INTERNAL=6f55d0242e6f98f685bc40eada656046
+//Development reason failure
+_Python3_Development_REASON_FAILURE:INTERNAL=
+//Path to a program.
+_Python3_EXECUTABLE:INTERNAL=/usr/bin/python3.11
+//Path to a file.
+_Python3_INCLUDE_DIR:INTERNAL=/usr/include/python3.11
+//Python3 Properties
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;11;2;64;;cpython-311-x86_64-linux-gnu;abi3;/usr/lib/python3.11;/usr/lib/python3.11;/usr/local/lib/python3.11/dist-packages;/usr/local/lib/python3.11/dist-packages
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=9706960aa2a868136534c4a00c8f3e22
+//Interpreter reason failure
+_Python3_Interpreter_REASON_FAILURE:INTERNAL=
+//Path to a library.
+_Python3_LIBRARY_RELEASE:INTERNAL=/usr/lib/x86_64-linux-gnu/libpython3.11.so
+_Python3_NUMPY_SIGNATURE:INTERNAL=954c0128220845e5d972152bcd98c63b
+//Path to a file.
+_Python3_NumPy_INCLUDE_DIR:INTERNAL=/home/radek/.local/lib/python3.11/site-packages/numpy/core/include
+//Path to a program.
+_Python_CONFIG:INTERNAL=/usr/bin/x86_64-linux-gnu-python3.11-config
+//Compiler reason failure
+_Python_Compiler_REASON_FAILURE:INTERNAL=
+_Python_DEVELOPMENT_EMBED_SIGNATURE:INTERNAL=12415ec9830a29c6ff5a7e97c66ff892
+_Python_DEVELOPMENT_MODULE_SIGNATURE:INTERNAL=5cfb69aa044db11e10ae2019970ae537
+//Development reason failure
+_Python_Development_REASON_FAILURE:INTERNAL=
+//Path to a file.
+_Python_INCLUDE_DIR:INTERNAL=/usr/include/python3.11
+//Interpreter reason failure
+_Python_Interpreter_REASON_FAILURE:INTERNAL=
+//Path to a library.
+_Python_LIBRARY_RELEASE:INTERNAL=/usr/lib/x86_64-linux-gnu/libpython3.11.so
+//NumPy reason failure
+_Python_NumPy_REASON_FAILURE:INTERNAL=
+//ADVANCED property for variable: boost_headers_DIR
+boost_headers_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_python_DIR
+boost_python_DIR-ADVANCED:INTERNAL=1
 
