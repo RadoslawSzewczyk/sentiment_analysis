@@ -10,8 +10,3 @@ std::vector<std::string> dataHandle::tokenize(const std::string& str) {
     return tokens;
 }
 
-void dataHandle::heloo()
-{
-    int a = 1;
-}
-

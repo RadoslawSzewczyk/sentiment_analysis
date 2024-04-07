@@ -1,3 +1,4 @@
+/home/radek/repos/sentiment_analysis/build/CMakeFiles/data.dir
 /home/radek/repos/sentiment_analysis/build/CMakeFiles/sentimentpy.dir
 /home/radek/repos/sentiment_analysis/build/CMakeFiles/edit_cache.dir
 /home/radek/repos/sentiment_analysis/build/CMakeFiles/rebuild_cache.dir

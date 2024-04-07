@@ -4,6 +4,7 @@
 #include <sstream>
 #include <vector>
 #include <algorithm>
+#include <limits>
 
 class dataHandle
 {
@@ -44,7 +45,12 @@ public:
         outputFile.close();
     }
     
-    static void helloo();
+    
+static void helloo()
+{
+    int a = 1;
+}
+
 
     
 };
