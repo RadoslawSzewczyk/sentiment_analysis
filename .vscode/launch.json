@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "G++: Launch (CMake + G++-12)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",  // Replace with your executable name if different
+            "preLaunchTask": "CMake: build",  // Use built-in CMake task
+            "sourceFileMap": [
+                {
+                    "file": "${file}",
+                    "sourceRoot": "${workspaceFolder}"
+                }
+            ],
+            "cwd": "${workspaceFolder}",
+            "arguments": [],
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb" // Path to your GDB debugger (if using GDB)
+        }
+    ]
+}

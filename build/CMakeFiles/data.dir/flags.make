@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = 
 
-CXX_FLAGS =  -fmodules-ts -std=c++20 -fmax-errors=10 -DPYBIND11_INSTALL=ON -DPYBIND11_TEST=OFF -DPYBIND11_PYTHON_VERSION=3.11 -std=c++20
+CXX_FLAGS =  -fmodules-ts -std=c++20 -fmax-errors=10 -fpermissive -DPYBIND11_INSTALL=ON -DPYBIND11_TEST=OFF -DPYBIND11_PYTHON_VERSION=3.11 -std=c++20
 
