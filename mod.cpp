@@ -8,9 +8,7 @@ module;
 
 export module data;
 
-export class dataHandle {
-public:
-  static std::vector<std::string> tokenize(const std::string& str) {
+std::vector<std::string> tokenize(const std::string& str) {
     std::regex word_regex(R"(\b\w+\b)");
     std::sregex_iterator words_begin(str.begin(), str.end(), word_regex);
     std::sregex_iterator words_end;
@@ -19,11 +17,10 @@ public:
     for (std::sregex_iterator it = words_begin; it != words_end; ++it) {
       tokens.push_back(it->str());
     }
-
     return tokens;
   }
 
-  static void processAndTokenizeFile() {
+export void processAndTokenizeFile() {
     std::string trainData = "amazon_review_polarity_csv/train.csv";
     std::string trainTokens = "amazon_review_polarity_csv/tokens.csv";
     std::ifstream inputFile(trainData);
@@ -55,4 +52,3 @@ public:
       }
     }
   }
-};

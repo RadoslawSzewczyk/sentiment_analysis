@@ -1,0 +1,4 @@
+/home/radek/repos/sentiment_analysis/testFile/build/CMakeFiles/data.dir
+/home/radek/repos/sentiment_analysis/testFile/build/CMakeFiles/sentimenttest.dir
+/home/radek/repos/sentiment_analysis/testFile/build/CMakeFiles/edit_cache.dir
+/home/radek/repos/sentiment_analysis/testFile/build/CMakeFiles/rebuild_cache.dir

@@ -1,10 +1,10 @@
 
 #include <pybind11/pybind11.h>
-
 import data;
+
 void wrap(){
     //dataHandle::processAndTokenizeFile();
-    dataHandle::processAndTokenizeFile();
+    processAndTokenizeFile();
 }
 
 namespace py = pybind11;
