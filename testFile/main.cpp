@@ -1,10 +1,8 @@
-#include <iostream>
 import data;
 
 
-
 int main(){
-    dictWordsToList ();
+    test();
     //processAndTokenizeFile();
     return 0;
 }

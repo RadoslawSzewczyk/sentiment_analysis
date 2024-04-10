@@ -9,7 +9,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/radek/repos/sentiment_analysis/testFile/main.cpp" "CMakeFiles/sentimenttest.dir/main.cpp.o" "gcc" "CMakeFiles/sentimenttest.dir/main.cpp.o.d"
-  "/home/radek/repos/sentiment_analysis/testFile/mod.cpp" "CMakeFiles/sentimenttest.dir/mod.cpp.o" "gcc" "CMakeFiles/sentimenttest.dir/mod.cpp.o.d"
+  "/home/radek/repos/sentiment_analysis/testFile/mod.ixx" "CMakeFiles/sentimenttest.dir/mod.ixx.o" "gcc" "CMakeFiles/sentimenttest.dir/mod.ixx.o.d"
+  "/home/radek/repos/sentiment_analysis/testFile/wordMatch.ixx" "CMakeFiles/sentimenttest.dir/wordMatch.ixx.o" "gcc" "CMakeFiles/sentimenttest.dir/wordMatch.ixx.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

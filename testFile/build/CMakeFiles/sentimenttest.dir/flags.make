@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = 
 
-CXX_FLAGS =  -fmodules-ts -std=c++20 -fmax-errors=10 -Wno-system-headers  -std=c++20
+CXX_FLAGS =  -x c++  -fmodules-ts -std=c++20 -fmax-errors=10 -std=c++20
 

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libwordMatch.a CMakeFiles/wordMatch.dir/wordMatch.ixx.o
+/usr/bin/ranlib libwordMatch.a

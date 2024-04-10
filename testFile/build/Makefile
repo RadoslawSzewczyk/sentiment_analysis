@@ -130,6 +130,19 @@ data/fast:
 .PHONY : data/fast
 
 #=============================================================================
+# Target rules for targets named wordMatch
+
+# Build rule for target.
+wordMatch: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 wordMatch
+.PHONY : wordMatch
+
+# fast build rule for target.
+wordMatch/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wordMatch.dir/build.make CMakeFiles/wordMatch.dir/build
+.PHONY : wordMatch/fast
+
+#=============================================================================
 # Target rules for targets named sentimenttest
 
 # Build rule for target.
@@ -166,32 +179,53 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimenttest.dir/build.make CMakeFiles/sentimenttest.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-mod.o: mod.cpp.o
+mod.o: mod.ixx.o
 .PHONY : mod.o
 
 # target to build an object file
-mod.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data.dir/build.make CMakeFiles/data.dir/mod.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimenttest.dir/build.make CMakeFiles/sentimenttest.dir/mod.cpp.o
-.PHONY : mod.cpp.o
+mod.ixx.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimenttest.dir/build.make CMakeFiles/sentimenttest.dir/mod.ixx.o
+.PHONY : mod.ixx.o
 
-mod.i: mod.cpp.i
+mod.i: mod.ixx.i
 .PHONY : mod.i
 
 # target to preprocess a source file
-mod.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data.dir/build.make CMakeFiles/data.dir/mod.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimenttest.dir/build.make CMakeFiles/sentimenttest.dir/mod.cpp.i
-.PHONY : mod.cpp.i
+mod.ixx.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimenttest.dir/build.make CMakeFiles/sentimenttest.dir/mod.ixx.i
+.PHONY : mod.ixx.i
 
-mod.s: mod.cpp.s
+mod.s: mod.ixx.s
 .PHONY : mod.s
 
 # target to generate assembly for a file
-mod.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data.dir/build.make CMakeFiles/data.dir/mod.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimenttest.dir/build.make CMakeFiles/sentimenttest.dir/mod.cpp.s
-.PHONY : mod.cpp.s
+mod.ixx.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimenttest.dir/build.make CMakeFiles/sentimenttest.dir/mod.ixx.s
+.PHONY : mod.ixx.s
+
+wordMatch.o: wordMatch.ixx.o
+.PHONY : wordMatch.o
+
+# target to build an object file
+wordMatch.ixx.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimenttest.dir/build.make CMakeFiles/sentimenttest.dir/wordMatch.ixx.o
+.PHONY : wordMatch.ixx.o
+
+wordMatch.i: wordMatch.ixx.i
+.PHONY : wordMatch.i
+
+# target to preprocess a source file
+wordMatch.ixx.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimenttest.dir/build.make CMakeFiles/sentimenttest.dir/wordMatch.ixx.i
+.PHONY : wordMatch.ixx.i
+
+wordMatch.s: wordMatch.ixx.s
+.PHONY : wordMatch.s
+
+# target to generate assembly for a file
+wordMatch.ixx.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimenttest.dir/build.make CMakeFiles/sentimenttest.dir/wordMatch.ixx.s
+.PHONY : wordMatch.ixx.s
 
 # Help Target
 help:
@@ -203,12 +237,16 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... data"
 	@echo "... sentimenttest"
+	@echo "... wordMatch"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... mod.o"
 	@echo "... mod.i"
 	@echo "... mod.s"
+	@echo "... wordMatch.o"
+	@echo "... wordMatch.i"
+	@echo "... wordMatch.s"
 .PHONY : help
 
 

@@ -41,5 +41,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/data.dir/DependInfo.cmake"
+  "CMakeFiles/wordMatch.dir/DependInfo.cmake"
   "CMakeFiles/sentimenttest.dir/DependInfo.cmake"
   )

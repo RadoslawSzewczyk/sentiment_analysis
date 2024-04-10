@@ -69,24 +69,38 @@ include CMakeFiles/sentimenttest.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/sentimenttest.dir/flags.make
 
-CMakeFiles/sentimenttest.dir/mod.cpp.o: CMakeFiles/sentimenttest.dir/flags.make
-CMakeFiles/sentimenttest.dir/mod.cpp.o: /home/radek/repos/sentiment_analysis/testFile/mod.cpp
-CMakeFiles/sentimenttest.dir/mod.cpp.o: CMakeFiles/sentimenttest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/radek/repos/sentiment_analysis/testFile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sentimenttest.dir/mod.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sentimenttest.dir/mod.cpp.o -MF CMakeFiles/sentimenttest.dir/mod.cpp.o.d -o CMakeFiles/sentimenttest.dir/mod.cpp.o -c /home/radek/repos/sentiment_analysis/testFile/mod.cpp
+CMakeFiles/sentimenttest.dir/mod.ixx.o: CMakeFiles/sentimenttest.dir/flags.make
+CMakeFiles/sentimenttest.dir/mod.ixx.o: /home/radek/repos/sentiment_analysis/testFile/mod.ixx
+CMakeFiles/sentimenttest.dir/mod.ixx.o: CMakeFiles/sentimenttest.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/radek/repos/sentiment_analysis/testFile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sentimenttest.dir/mod.ixx.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sentimenttest.dir/mod.ixx.o -MF CMakeFiles/sentimenttest.dir/mod.ixx.o.d -o CMakeFiles/sentimenttest.dir/mod.ixx.o -c /home/radek/repos/sentiment_analysis/testFile/mod.ixx
 
-CMakeFiles/sentimenttest.dir/mod.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sentimenttest.dir/mod.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/radek/repos/sentiment_analysis/testFile/mod.cpp > CMakeFiles/sentimenttest.dir/mod.cpp.i
+CMakeFiles/sentimenttest.dir/mod.ixx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sentimenttest.dir/mod.ixx.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/radek/repos/sentiment_analysis/testFile/mod.ixx > CMakeFiles/sentimenttest.dir/mod.ixx.i
 
-CMakeFiles/sentimenttest.dir/mod.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sentimenttest.dir/mod.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/radek/repos/sentiment_analysis/testFile/mod.cpp -o CMakeFiles/sentimenttest.dir/mod.cpp.s
+CMakeFiles/sentimenttest.dir/mod.ixx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sentimenttest.dir/mod.ixx.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/radek/repos/sentiment_analysis/testFile/mod.ixx -o CMakeFiles/sentimenttest.dir/mod.ixx.s
+
+CMakeFiles/sentimenttest.dir/wordMatch.ixx.o: CMakeFiles/sentimenttest.dir/flags.make
+CMakeFiles/sentimenttest.dir/wordMatch.ixx.o: /home/radek/repos/sentiment_analysis/testFile/wordMatch.ixx
+CMakeFiles/sentimenttest.dir/wordMatch.ixx.o: CMakeFiles/sentimenttest.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/radek/repos/sentiment_analysis/testFile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sentimenttest.dir/wordMatch.ixx.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sentimenttest.dir/wordMatch.ixx.o -MF CMakeFiles/sentimenttest.dir/wordMatch.ixx.o.d -o CMakeFiles/sentimenttest.dir/wordMatch.ixx.o -c /home/radek/repos/sentiment_analysis/testFile/wordMatch.ixx
+
+CMakeFiles/sentimenttest.dir/wordMatch.ixx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sentimenttest.dir/wordMatch.ixx.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/radek/repos/sentiment_analysis/testFile/wordMatch.ixx > CMakeFiles/sentimenttest.dir/wordMatch.ixx.i
+
+CMakeFiles/sentimenttest.dir/wordMatch.ixx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sentimenttest.dir/wordMatch.ixx.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/radek/repos/sentiment_analysis/testFile/wordMatch.ixx -o CMakeFiles/sentimenttest.dir/wordMatch.ixx.s
 
 CMakeFiles/sentimenttest.dir/main.cpp.o: CMakeFiles/sentimenttest.dir/flags.make
 CMakeFiles/sentimenttest.dir/main.cpp.o: /home/radek/repos/sentiment_analysis/testFile/main.cpp
 CMakeFiles/sentimenttest.dir/main.cpp.o: CMakeFiles/sentimenttest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/radek/repos/sentiment_analysis/testFile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sentimenttest.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/radek/repos/sentiment_analysis/testFile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sentimenttest.dir/main.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sentimenttest.dir/main.cpp.o -MF CMakeFiles/sentimenttest.dir/main.cpp.o.d -o CMakeFiles/sentimenttest.dir/main.cpp.o -c /home/radek/repos/sentiment_analysis/testFile/main.cpp
 
 CMakeFiles/sentimenttest.dir/main.cpp.i: cmake_force
@@ -99,17 +113,19 @@ CMakeFiles/sentimenttest.dir/main.cpp.s: cmake_force
 
 # Object files for target sentimenttest
 sentimenttest_OBJECTS = \
-"CMakeFiles/sentimenttest.dir/mod.cpp.o" \
+"CMakeFiles/sentimenttest.dir/mod.ixx.o" \
+"CMakeFiles/sentimenttest.dir/wordMatch.ixx.o" \
 "CMakeFiles/sentimenttest.dir/main.cpp.o"
 
 # External object files for target sentimenttest
 sentimenttest_EXTERNAL_OBJECTS =
 
-sentimenttest: CMakeFiles/sentimenttest.dir/mod.cpp.o
+sentimenttest: CMakeFiles/sentimenttest.dir/mod.ixx.o
+sentimenttest: CMakeFiles/sentimenttest.dir/wordMatch.ixx.o
 sentimenttest: CMakeFiles/sentimenttest.dir/main.cpp.o
 sentimenttest: CMakeFiles/sentimenttest.dir/build.make
 sentimenttest: CMakeFiles/sentimenttest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/radek/repos/sentiment_analysis/testFile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable sentimenttest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/radek/repos/sentiment_analysis/testFile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable sentimenttest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sentimenttest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

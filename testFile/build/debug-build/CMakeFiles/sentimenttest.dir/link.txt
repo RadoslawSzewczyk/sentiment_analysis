@@ -1,1 +1,0 @@
-/usr/bin/g++  -fmodules-ts -std=c++20 -fmax-errors=10 -fpermissive CMakeFiles/sentimenttest.dir/mod.cpp.o CMakeFiles/sentimenttest.dir/main.cpp.o -o sentimenttest
