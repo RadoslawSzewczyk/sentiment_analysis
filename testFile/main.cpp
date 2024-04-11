@@ -2,7 +2,7 @@ import data;
 
 
 int main(){
-    test();
+    levDist("leet", "geet");
     //processAndTokenizeFile();
     return 0;
 }

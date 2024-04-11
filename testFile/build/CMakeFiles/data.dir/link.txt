@@ -1,0 +1,1 @@
+/usr/bin/g++ -fPIC  -x c++  -fmodules-ts -std=c++20 -fmax-errors=10 -shared  -o libdata.so CMakeFiles/data.dir/mod.ixx.o 

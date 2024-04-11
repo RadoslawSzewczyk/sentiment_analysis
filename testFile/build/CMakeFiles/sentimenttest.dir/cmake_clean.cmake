@@ -3,8 +3,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/sentimenttest.dir/main.cpp.o.d"
   "CMakeFiles/sentimenttest.dir/mod.ixx.o"
   "CMakeFiles/sentimenttest.dir/mod.ixx.o.d"
-  "CMakeFiles/sentimenttest.dir/wordMatch.ixx.o"
-  "CMakeFiles/sentimenttest.dir/wordMatch.ixx.o.d"
   "sentimenttest"
   "sentimenttest.pdb"
 )
