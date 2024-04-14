@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -x c++  -fmodules-ts -std=c++20 -fmax-errors=1")
 set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
 
-add_library(data INTERFACE mod.ixx)
+add_library(data mod.ixx)
 #add_library(wordMatch INTERFACE wordMatch.ixx)
 
 add_executable(sentimenttest mod.ixx main.cpp)
