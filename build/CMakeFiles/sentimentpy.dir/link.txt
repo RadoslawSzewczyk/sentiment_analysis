@@ -1,1 +1,0 @@
-/usr/bin/gcc -fPIC  -fmodules-ts -std=c++20 -fmax-errors=10 -fpermissive -DPYBIND11_INSTALL=ON -DPYBIND11_TEST=OFF -DPYBIND11_PYTHON_VERSION=3.11 -flto -shared  -o sentimentpy.cpython-311-x86_64-linux-gnu.so CMakeFiles/sentimentpy.dir/mod.cpp.o CMakeFiles/sentimentpy.dir/main.cpp.o

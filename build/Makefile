@@ -117,81 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named data
+# Target rules for targets named sentiment
 
 # Build rule for target.
-data: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 data
-.PHONY : data
+sentiment: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentiment
+.PHONY : sentiment
 
 # fast build rule for target.
-data/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data.dir/build.make CMakeFiles/data.dir/build
-.PHONY : data/fast
+sentiment/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentiment.dir/build.make CMakeFiles/sentiment.dir/build
+.PHONY : sentiment/fast
 
-#=============================================================================
-# Target rules for targets named sentimentpy
-
-# Build rule for target.
-sentimentpy: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentimentpy
-.PHONY : sentimentpy
-
-# fast build rule for target.
-sentimentpy/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/build
-.PHONY : sentimentpy/fast
-
-main.o: main.cpp.o
-.PHONY : main.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentiment.dir/build.make CMakeFiles/sentiment.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-mod.o: mod.cpp.o
-.PHONY : mod.o
-
-# target to build an object file
-mod.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data.dir/build.make CMakeFiles/data.dir/mod.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/mod.cpp.o
-.PHONY : mod.cpp.o
-
-mod.i: mod.cpp.i
-.PHONY : mod.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-mod.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data.dir/build.make CMakeFiles/data.dir/mod.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/mod.cpp.i
-.PHONY : mod.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentiment.dir/build.make CMakeFiles/sentiment.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-mod.s: mod.cpp.s
-.PHONY : mod.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-mod.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data.dir/build.make CMakeFiles/data.dir/mod.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentimentpy.dir/build.make CMakeFiles/sentimentpy.dir/mod.cpp.s
-.PHONY : mod.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sentiment.dir/build.make CMakeFiles/sentiment.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -201,14 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... data"
-	@echo "... sentimentpy"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... mod.o"
-	@echo "... mod.i"
-	@echo "... mod.s"
+	@echo "... sentiment"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 
