@@ -94,7 +94,8 @@
         "__tree": "cpp",
         "stack": "cpp",
         "filesystem": "cpp",
-        "strstream": "cpp"
+        "strstream": "cpp",
+        "ranges": "cpp"
     },
     "C_Cpp.default.compilerPath": "/usr/bin/clang++-17",
     "C_Cpp.errorSquiggles": "disabled"
