@@ -1,39 +1,42 @@
-#include <string>
-#include <vector>
-#include <iostream>
-#include "classificators.h"
+// #include <pybind11/pybind11.h>
+// #include <pybind11/stl.h>
+// #include <pybind11/stl_bind.h>
+// #include "classificators.h"
 
-int main() {
+// namespace py = pybind11;
 
-    // dataAmazonReview review;
-    // naiveBayes nb(review);
+// PYBIND11_MODULE(classificator_module, m) {
+//     py::class_<classificator, std::shared_ptr<classificator>>(m, "classificator")
+//         .def("train", &classificator::train)
+//         .def("predict", &classificator::predict)
+//         .def("saveToFile", &classificator::saveToFile)
+//         .def("readFromFile", &classificator::readFromFile)
+//         .def_readwrite("name", &classificator::name)
+//         .def_readwrite("tokens", &classificator::tokens);
 
-    // try {
-    //     nb.train();
-    // }
-    // catch (const std::runtime_error& e) {
-    //     std::cerr << "Training Error: " << e.what() << std::endl;
-    //     return 1;
-    // }
+//     py::class_<naiveBayes, std::shared_ptr<naiveBayes>, classificator>(m, "naiveBayes")
+//         .def(py::init<const dataAmazonReview&>())
+//         .def(py::init<const defaultDataFrame&>())
+//         .def("train", &naiveBayes::train)
+//         .def("predict", &naiveBayes::predict)
+//         .def("saveToFile", &naiveBayes::saveToFile)
+//         .def("readFromFile", &naiveBayes::readFromFile);
 
-    // nb.saveToFile("../models/model.txt");
-    // defaultDataFrame revieww("def.txt", "ddef.txt", "Def");
-    // naiveBayes nb_loaded(revieww);
-    // nb_loaded.readFromFile("../models/model.txt");
-    // std::vector<int> features = { 2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 4, 11, 12, 13, 5, 14, 15, 16, 17, 5, 18, 6, 7, 8, 5, 19 };
-    // try {
-    //     auto prediction = nb_loaded.predict(features);
+//     py::class_<dataFrame, std::shared_ptr<dataFrame>>(m, "dataFrame")
+//         .def(py::init<>())
+//         .def_readwrite("dataInputPath", &dataFrame::dataInputPath)
+//         .def_readwrite("dataOutputPath", &dataFrame::dataOutputPath)
+//         .def_readwrite("dataName", &dataFrame::dataName)
+//         .def_readwrite("stop", &dataFrame::stop)
+//         .def("previewData", &dataFrame::previewData, py::arg("x") = 10)
+//         .def("processAndTokenizeFile", &dataFrame::processAndTokenizeFile, py::arg("batch_size") = 10)
+//         .def("processLine", &dataFrame::processLine)
+//         .def(py::self = py::self)
+//         .def(py::self == py::self);
 
-    //     std::cout << "Predicted class: " << prediction.first << " with probability: " << prediction.second << std::endl;
-    // }
-    // catch (const std::invalid_argument& e) {
-    //     std::cerr << "Prediction Error: " << e.what() << std::endl;
-    // }
+//     py::class_<dataAmazonReview, std::shared_ptr<dataAmazonReview>, dataFrame>(m, "dataAmazonReview")
+//         .def(py::init<const std::filesystem::path&, const std::filesystem::path&, const std::string&>());
 
-    dataAmazonReview am1;
-    dataAmazonReview am2;
-
-    if(am1 == am2) std::cout << "tak";
-
-    return 0;
-}
+//     py::class_<defaultDataFrame, std::shared_ptr<defaultDataFrame>, dataFrame>(m, "defaultDataFrame")
+//         .def(py::init<const std::filesystem::path&, const std::filesystem::path&, const std::string&>());
+// }

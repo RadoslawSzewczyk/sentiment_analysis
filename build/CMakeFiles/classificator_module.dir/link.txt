@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -flto -shared  -o classificator_module.cpython-311-x86_64-linux-gnu.so CMakeFiles/classificator_module.dir/src/wordMatch.cpp.o CMakeFiles/classificator_module.dir/src/data.cpp.o CMakeFiles/classificator_module.dir/src/classificators.cpp.o CMakeFiles/classificator_module.dir/src/main.cpp.o CMakeFiles/classificator_module.dir/src/bindings.cpp.o

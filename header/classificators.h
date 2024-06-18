@@ -3,7 +3,7 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
-#include <filesystem>
+//#include <filesystem>
 #include <iostream>
 #include <unordered_map>
 #include <cmath>
@@ -20,7 +20,7 @@ public:
     virtual void readFromFile(const std::string& filename) = 0;
 };
 
-class naiveBayes : classificator {
+class naiveBayes : public classificator {
 
     std::unordered_map<int, int> class_counts;
     std::unordered_map<int, std::vector<int>> feature_counts;
