@@ -1,7 +1,7 @@
 #include "wordMatch.h"
 
 
-std::vector<std::string> wordMatch::dictWordsToVec() {
+std::vector<std::string> dicStop::dictWordsToVec() {
     std::vector<std::string> retVec;
     std::filesystem::path dict = "dict.txt";
     std::ifstream inputFile(dict);
@@ -12,7 +12,7 @@ std::vector<std::string> wordMatch::dictWordsToVec() {
     return retVec;
 }
 
-std::vector<std::string> wordMatch::stopWordsToVec() {
+std::vector<std::string> dicStop::stopWordsToVec() {
     std::vector<std::string> retVec;
     std::filesystem::path stop = "stopwords.txt";
     std::ifstream inputFile(stop);
@@ -32,9 +32,9 @@ int wordMatch::levDist(std::string word1, std::string word2) {
     for (int i = 0; i <= sizeWord1; i++) {
         mat[i][0] = i;
     }
-    for (int i = 0; i <= sizeWord2; i++) {
-        mat[0][i] = i;
-    }
+    //ranges
+    std::ranges::for_each(mat[0], [n = 0](int &val) mutable { val = n++; });
+
     for (int i = 1; i <= sizeWord1; i++) {
         for (int j = 1; j <= sizeWord2; j++) {
             int cost = word2[j - 1] == word1[i - 1] ? 0 : 1;

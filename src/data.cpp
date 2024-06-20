@@ -70,7 +70,7 @@ void dataFrame::processLine(std::string& line, std::unordered_map<std::string, i
         return;
     }
 
-    std::transform(line.begin(), line.end(), line.begin(), [](unsigned char c) { return std::tolower(c); });
+    std::ranges::transform(processedLine, processedLine.begin(), [](unsigned char c) { return std::tolower(c); });
 
     char label = line[1];
 
@@ -109,6 +109,47 @@ void dataFrame::processLine(std::string& line, std::unordered_map<std::string, i
     std::cout << "line done \n";
 }
 
+std::vector<int> dataFrame::processSingleLine(const std::string& line) {
+    std::vector<int> tokenizedLine;
+
+    if (line.empty()) {
+        return tokenizedLine;
+    }
+
+    std::unordered_map<std::string, int> wordMap;
+    int wordCount = 1;
+
+
+    std::string processedLine = line;
+    //ranges
+    std::ranges::transform(processedLine, processedLine.begin(), [](unsigned char c) { return std::tolower(c); });
+
+    std::string filteredString;
+    for (char c : processedLine) {
+        if (specialChars.find(c) == std::string::npos) {
+            filteredString += c;
+        } else {
+            filteredString += " ";
+        }
+    }
+    filteredString.erase(std::unique(filteredString.begin(), filteredString.end(), [](char a, char b) { return a == ' ' && b == ' '; }), filteredString.end());
+
+    filteredString = wordMatch::removeStopWords(filteredString, stopWords, 1);
+    filteredString = wordMatch::autocorrectWords(filteredString, dict, 1);
+
+    std::istringstream iss(filteredString);
+    std::string word;
+
+    while (iss >> word) {
+        if (wordMap.find(word) == wordMap.end()) {
+            wordMap[word] = wordCount++;
+        }
+        tokenizedLine.push_back(wordMap[word]);
+    }
+
+    return tokenizedLine;
+}
+
 dataAmazonReview::dataAmazonReview(const std::filesystem::path &dataInputPathC, const std::filesystem::path &dataOutputPathC, const std::string &dataNameC) {
     dataInputPath = dataInputPathC;
     dataOutputPath = dataOutputPathC;
@@ -131,4 +172,3 @@ dataFrame& dataFrame::operator=(const dataFrame& other){
 bool dataFrame::operator==(const dataFrame& other) const{
     if(this->dataName == other.dataName) return true;
 }
-

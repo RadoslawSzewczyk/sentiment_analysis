@@ -36,6 +36,7 @@ PYBIND11_MODULE(classificator_module, m) {
         .def("previewData", &dataFrame::previewData, py::arg("x") = 10)
         .def("processAndTokenizeFile", &dataFrame::processAndTokenizeFile, py::arg("batch_size") = 10)
         .def("processLine", &dataFrame::processLine)
+        .def("processSingleLine", &dataFrame::processSingleLine)
         .def(py::self == py::self)
         .def(py::self != py::self);
 

@@ -31,6 +31,8 @@ public:
 
     virtual void processLine(std::string& line, std::unordered_map<std::string, int>& wordMap, std::mutex& mtx, int& wordCount, std::ofstream& outputFile);
 
+    std::vector<int> processSingleLine(const std::string& line);
+
     dataFrame& operator=(const dataFrame& other);
 
     bool operator==(const dataFrame& other) const;
