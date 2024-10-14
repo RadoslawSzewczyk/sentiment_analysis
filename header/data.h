@@ -4,7 +4,6 @@
 #include <fstream>
 #include <sstream>
 #include <regex>
-//#include <filesystem>
 #include <thread>
 #include <mutex>
 #include <queue>
@@ -12,7 +11,8 @@
 #include <unordered_map>
 #include "wordMatch.h"
 
-class dataFrame {
+class dataFrame 
+{
 public:
     std::filesystem::path dataInputPath;
     std::filesystem::path dataOutputPath;
@@ -21,9 +21,9 @@ public:
 
     const std::string specialChars = "#$@!%^&*()?\\\"/-+|':<,._=[]{}34567890";
     
-    std::vector<std::string> stopWords = wordMatch::stopWordsToVec();
+    std::vector<std::string> stopWords = dicStop::stopWordsToVec();
 
-    std::vector<std::string> dict = wordMatch::dictWordsToVec();
+    std::vector<std::string> dict = dicStop::dictWordsToVec();
 
     void previewData(int x = 10);
 
@@ -40,7 +40,8 @@ public:
     virtual ~dataFrame() = default;
 };
 
-class dataAmazonReview : public dataFrame {
+class dataAmazonReview : public dataFrame 
+{
 public:
     dataAmazonReview(const std::filesystem::path &dataInputPathC = "../amazon_review_polarity_csv/ttest.csv", const std::filesystem::path &dataOutputPathC = "../amazon_review_polarity_csv/tokens.csv", const std::string &dataNameC = "Amazon Review");
 
@@ -48,7 +49,8 @@ public:
 };
 
 
-class defaultDataFrame : public dataFrame {
+class defaultDataFrame : public dataFrame 
+{
 public:
     defaultDataFrame(const std::filesystem::path& dataInputPathC, const std::filesystem::path& dataOutputPathC, const std::string& dataNameC);
 

@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/workspaces/sentiment_analysis/build",
+  "command": "/usr/bin/clang++  -Dclassificator_module_EXPORTS -I/workspaces/sentiment_analysis/header -isystem /workspaces/sentiment_analysis/src/pybind11/include -isystem /home/codespace/.python/current/include/python3.12  -g -fPIC -fvisibility=hidden   -std=gnu++2a -o CMakeFiles/classificator_module.dir/src/wordMatch.cpp.o -c /workspaces/sentiment_analysis/src/wordMatch.cpp",
+  "file": "/workspaces/sentiment_analysis/src/wordMatch.cpp"
+},
+{
+  "directory": "/workspaces/sentiment_analysis/build",
+  "command": "/usr/bin/clang++  -Dclassificator_module_EXPORTS -I/workspaces/sentiment_analysis/header -isystem /workspaces/sentiment_analysis/src/pybind11/include -isystem /home/codespace/.python/current/include/python3.12  -g -fPIC -fvisibility=hidden   -std=gnu++2a -o CMakeFiles/classificator_module.dir/src/data.cpp.o -c /workspaces/sentiment_analysis/src/data.cpp",
+  "file": "/workspaces/sentiment_analysis/src/data.cpp"
+},
+{
+  "directory": "/workspaces/sentiment_analysis/build",
+  "command": "/usr/bin/clang++  -Dclassificator_module_EXPORTS -I/workspaces/sentiment_analysis/header -isystem /workspaces/sentiment_analysis/src/pybind11/include -isystem /home/codespace/.python/current/include/python3.12  -g -fPIC -fvisibility=hidden   -std=gnu++2a -o CMakeFiles/classificator_module.dir/src/classificators.cpp.o -c /workspaces/sentiment_analysis/src/classificators.cpp",
+  "file": "/workspaces/sentiment_analysis/src/classificators.cpp"
+},
+{
+  "directory": "/workspaces/sentiment_analysis/build",
+  "command": "/usr/bin/clang++  -Dclassificator_module_EXPORTS -I/workspaces/sentiment_analysis/header -isystem /workspaces/sentiment_analysis/src/pybind11/include -isystem /home/codespace/.python/current/include/python3.12  -g -fPIC -fvisibility=hidden   -std=gnu++2a -o CMakeFiles/classificator_module.dir/src/main.cpp.o -c /workspaces/sentiment_analysis/src/main.cpp",
+  "file": "/workspaces/sentiment_analysis/src/main.cpp"
+},
+{
+  "directory": "/workspaces/sentiment_analysis/build",
+  "command": "/usr/bin/clang++  -Dclassificator_module_EXPORTS -I/workspaces/sentiment_analysis/header -isystem /workspaces/sentiment_analysis/src/pybind11/include -isystem /home/codespace/.python/current/include/python3.12  -g -fPIC -fvisibility=hidden   -std=gnu++2a -o CMakeFiles/classificator_module.dir/src/bindings.cpp.o -c /workspaces/sentiment_analysis/src/bindings.cpp",
+  "file": "/workspaces/sentiment_analysis/src/bindings.cpp"
+}
+]

@@ -1,5 +1,13 @@
 #include "data.h"
-//watki all the way
+
+void toLowerCase(std::string& str)
+{
+    for (char& c : str)
+    {
+        c = std::tolower(static_cast<unsigned char>(c));
+    }
+}
+
 void dataFrame::previewData(int x) {
     std::ifstream inputFile(dataInputPath);
     std::string line;
@@ -65,27 +73,32 @@ void dataFrame::processAndTokenizeFile(const int batch_size) {
     outputFile.close();
 }
 
-void dataFrame::processLine(std::string& line, std::unordered_map<std::string, int>& wordMap, std::mutex& mtx, int& wordCount, std::ofstream& outputFile) {
-    if (line.empty()) {
+void dataFrame::processLine(std::string& line, std::unordered_map<std::string, int>& wordMap, std::mutex& mtx, int& wordCount, std::ofstream& outputFile)
+{
+    if (line.empty())
+    {
         return;
     }
 
-    std::ranges::transform(processedLine, processedLine.begin(), [](unsigned char c) { return std::tolower(c); });
+    toLowerCase(line);
 
     char label = line[1];
 
     std::string content = line.substr(1);
-    //regex
+
     std::string filteredString;
-    for (char c : content) {
-        if (specialChars.find(c) == std::string::npos) {
+    for (char c : content) 
+    {
+        if (specialChars.find(c) == std::string::npos) 
+        {
             filteredString += c;
         }
-        else {
+        else 
+        {
             filteredString += " ";
         }
     }
-    //regex
+
     filteredString.erase(std::unique(filteredString.begin(), filteredString.end(), [](char a, char b) { return a == ' ' && b == ' '; }), filteredString.end());
 
     filteredString = wordMatch::removeStopWords(filteredString, stopWords, 1);
@@ -95,9 +108,11 @@ void dataFrame::processLine(std::string& line, std::unordered_map<std::string, i
     std::string word;
     std::string outputString(1, label);
 
-    while (iss >> word) {
+    while (iss >> word)
+    {
         std::lock_guard<std::mutex> lock(mtx);
-        if (wordMap.find(word) == wordMap.end()) {
+        if (wordMap.find(word) == wordMap.end())
+        {
             wordMap[word] = wordCount++;
         }
         outputString += " " + std::to_string(wordMap[word]);
@@ -121,8 +136,7 @@ std::vector<int> dataFrame::processSingleLine(const std::string& line) {
 
 
     std::string processedLine = line;
-    //ranges
-    std::ranges::transform(processedLine, processedLine.begin(), [](unsigned char c) { return std::tolower(c); });
+    toLowerCase(processedLine);
 
     std::string filteredString;
     for (char c : processedLine) {
@@ -169,6 +183,8 @@ dataFrame& dataFrame::operator=(const dataFrame& other){
     return *this;
 }
 
-bool dataFrame::operator==(const dataFrame& other) const{
+bool dataFrame::operator==(const dataFrame& other) const
+{
     if(this->dataName == other.dataName) return true;
+    return false;
 }

@@ -32,13 +32,15 @@ int wordMatch::levDist(std::string word1, std::string word2) {
     for (int i = 0; i <= sizeWord1; i++) {
         mat[i][0] = i;
     }
-    //ranges
-    std::ranges::for_each(mat[0], [n = 0](int &val) mutable { val = n++; });
+
+    for (int j = 0; j <= sizeWord2; j++) {
+        mat[0][j] = j;
+    }
 
     for (int i = 1; i <= sizeWord1; i++) {
         for (int j = 1; j <= sizeWord2; j++) {
-            int cost = word2[j - 1] == word1[i - 1] ? 0 : 1;
-            mat[i][j] = std::min({ mat[i - 1][j] + 1, mat[i][j - 1] + 1, mat[i - 1][j - 1] + cost });
+            int cost = (word2[j - 1] == word1[i - 1]) ? 0 : 1;
+            mat[i][j] = std::min({mat[i - 1][j] + 1, mat[i][j - 1] + 1, mat[i - 1][j - 1] + cost});
         }
     }
     return mat[sizeWord1][sizeWord2];
