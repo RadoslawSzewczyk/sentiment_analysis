@@ -8,24 +8,28 @@ void toLowerCase(std::string& str)
     }
 }
 
-void dataFrame::previewData(int x) {
+void dataFrame::previewData(int x) 
+{
     std::ifstream inputFile(dataInputPath);
     std::string line;
     int count = 0;
-    while (std::getline(inputFile, line) && count < x) {
+    while (std::getline(inputFile, line) && count < x) 
+    {
         std::cout << line << std::endl;
         count++;
     }
 }
 
-void dataFrame::processAndTokenizeFile(const int batch_size) {
+void dataFrame::processAndTokenizeFile(const int batch_size) 
+{
     std::unordered_map<std::string, int> wordMap;
     std::mutex mtx;
     int wordCount = 1;
     std::ifstream inputFile(dataInputPath);
     std::ofstream outputFile(dataOutputPath);
 
-    if (!inputFile.is_open() || !outputFile.is_open()) {
+    if (!inputFile.is_open() || !outputFile.is_open()) 
+    {
         std::cout << "Error opening files." << "\n";
         return;
     }
@@ -34,8 +38,10 @@ void dataFrame::processAndTokenizeFile(const int batch_size) {
     std::condition_variable cv;
     std::vector<std::thread> workers;
 
-    for (int i = 0; i < std::thread::hardware_concurrency(); ++i) {
-        workers.emplace_back([this, &lineQueue, &cv, &wordMap, &mtx, &wordCount, &outputFile]() {
+    for (int i = 0; i < std::thread::hardware_concurrency(); ++i) 
+    {
+        workers.emplace_back([this, &lineQueue, &cv, &wordMap, &mtx, &wordCount, &outputFile]() 
+        {
             while (true) {
                 std::string line;
                 {
