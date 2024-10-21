@@ -8,7 +8,7 @@ void toLowerCase(std::string& str)
     }
 }
 
-void dataFrame::previewData(int x) 
+void dataFrame::previewData(const int& x) 
 {
     std::ifstream inputFile(dataInputPath);
     std::string line;
@@ -20,7 +20,7 @@ void dataFrame::previewData(int x)
     }
 }
 
-void dataFrame::processAndTokenizeFile(const int batch_size) 
+void dataFrame::processAndTokenizeFile(const int& batch_size) 
 {
     std::unordered_map<std::string, int> wordMap;
     std::mutex mtx;
@@ -42,7 +42,8 @@ void dataFrame::processAndTokenizeFile(const int batch_size)
     {
         workers.emplace_back([this, &lineQueue, &cv, &wordMap, &mtx, &wordCount, &outputFile]() 
         {
-            while (true) {
+            while (true) 
+            {
                 std::string line;
                 {
                     std::unique_lock<std::mutex> lock(mtx);
@@ -57,7 +58,8 @@ void dataFrame::processAndTokenizeFile(const int batch_size)
     }
 
     std::string line;
-    while (std::getline(inputFile, line)) {
+    while (std::getline(inputFile, line)) 
+    {
         {
             std::unique_lock<std::mutex> lock(mtx);
             lineQueue.push(line);
